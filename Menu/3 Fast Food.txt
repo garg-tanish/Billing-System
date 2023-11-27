@@ -1,0 +1,31 @@
+#Fast Food
+*Burgers
+Aloo Tikki Burger 50/-
+Double Tikki Burger 80/-
+Special Burger 100/-
+*Sides
+French Fries 50/-
+Paneer Fingers 100/-
+*Pasta
+Red Sauce Pasta 150/-
+White Sauce Pasta 160/-
+Mix Sauce Pasta 160/-
+*Sandwich
+Veg. Sandwich 95/-
+Grilled Veg. Sandwich 115/-
+*Pizza's
+Plain Cheese Pizza 100/-
+Corn, Cheese Pizza 150/-
+Capsicum, Onion Pizza 150/-
+Capsicum, Onion, Paneer Pizza 170/-
+Super Veggie Pizza(Double Cheese) 250/-
+*Extra Toppings
+Cheese 50/-
+Corn 50/-
+Vegetables 50/-
+Thin Base 50/-
+*Noodles
+Veg Hakka Noodles 145/-
+Chilli Garlic Noodles 145/-
+Pan Fried Noodles 225/-
+Gravy Noodles 225/-

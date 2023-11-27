@@ -1,0 +1,9 @@
+#Tea & Coffee
+Tea 20/-
+Ice Tea (Lemon) 50/-
+Green Tea 60/-
+Coffee Mochaccino 70/-
+Coffee Cappuccino 80/-
+Coffee Americano (Black) 80/-
+Coffee Espresso 60/-
+Cold-Coffee (Frappe) 70/-

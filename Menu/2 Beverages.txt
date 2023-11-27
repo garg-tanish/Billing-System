@@ -1,0 +1,13 @@
+#Beverages
+*Aerated Beverages
+Mineral Water 20/-
+Cold Drink 40/-
+Diet Pepsi 50/-
+Fresh Lime Water Sweet / Salt 40/-
+*Fresh Juices
+Fresh Juices Seasonal/ Mix 100/-
+*Cocktails & Mocktails
+Cocktails 200/-
+Fresh Mint Mojito 150/-
+Virgin Guava 150/-
+Watermelon Mojito 150/-
