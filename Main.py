@@ -205,8 +205,8 @@ def bill_button_operation():
     if len(customer_contact) < 10:
         tmsg.showinfo("Error", "Invalid contact number")
         return
-    if not customerContact.get().isdigit():
-        tmsg.showinfo("Error", "Invalid Customer Contact")
+    if str(customerContact.get()).startswith("0"):
+        tmsg.showinfo("Error", "Number can't start with zero. Enter a valid number.")
         return
     ans = tmsg.askquestion("Generate Bill", "Are You Sure to Generate Bill?")
     if ans == "yes":
@@ -600,15 +600,13 @@ update_menu_button.grid(row=0, column=4, padx=10)
 menu_tabel_frame = Frame(menu_frame)
 menu_tabel_frame.pack(fill=BOTH, expand=1)
 
-scrollbar_menu_x = Scrollbar(menu_tabel_frame, orient=HORIZONTAL)
 scrollbar_menu_y = Scrollbar(menu_tabel_frame, orient=VERTICAL)
 
 style = ttk.Style()
 style.configure("Treeview.Heading", font=("arial", 13, "bold"))
 style.configure("Treeview", font=("arial", 12), rowheight=25)
 
-menu_tabel = ttk.Treeview(menu_tabel_frame, style="Treeview", columns=("name", "price", "category"),
-                          xscrollcommand=scrollbar_menu_x.set, yscrollcommand=scrollbar_menu_y.set)
+menu_tabel = ttk.Treeview(menu_tabel_frame, style="Treeview", columns=("name", "price", "category"), yscrollcommand=scrollbar_menu_y.set)
 
 menu_tabel.heading("name", text="Name")
 menu_tabel.heading("price", text="Price")
@@ -616,10 +614,8 @@ menu_tabel["displaycolumns"] = ("name", "price")
 menu_tabel["show"] = "headings"
 menu_tabel.column("price", width=50, anchor='center')
 
-scrollbar_menu_x.pack(side=BOTTOM, fill=X)
 scrollbar_menu_y.pack(side=RIGHT, fill=Y)
 
-scrollbar_menu_x.configure(command=menu_tabel.xview)
 scrollbar_menu_y.configure(command=menu_tabel.yview)
 
 menu_tabel.pack(fill=BOTH, expand=1)
@@ -705,11 +701,10 @@ order_title_label.pack(side=TOP, fill="x")
 order_tabel_frame = Frame(order_frame)
 order_tabel_frame.place(x=0, y=40, height=260, width=680)
 
-scrollbar_order_x = Scrollbar(order_tabel_frame, orient=HORIZONTAL)
 scrollbar_order_y = Scrollbar(order_tabel_frame, orient=VERTICAL)
 
 order_tabel = ttk.Treeview(order_tabel_frame, columns=("name", "rate", "quantity", "price", "category"),
-                           xscrollcommand=scrollbar_order_x.set, yscrollcommand=scrollbar_order_y.set)
+yscrollcommand=scrollbar_order_y.set)
 
 order_tabel.heading("name", text="Name")
 order_tabel.heading("rate", text="Rate")
@@ -723,10 +718,8 @@ order_tabel.column("price", width=100, anchor='center', stretch=NO)
 
 order_tabel.bind("<ButtonRelease-1>", load_item_from_order)
 
-scrollbar_order_x.pack(side=BOTTOM, fill=X)
 scrollbar_order_y.pack(side=RIGHT, fill=Y)
 
-scrollbar_order_x.configure(command=order_tabel.xview)
 scrollbar_order_y.configure(command=order_tabel.yview)
 
 order_tabel.pack(fill=BOTH, expand=1)
